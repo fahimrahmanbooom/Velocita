@@ -23,22 +23,22 @@ extension SpeedViewController {
         // Meter/s Button
         meterPerSecButton.layer.backgroundColor = UIColor.white.cgColor
         meterPerSecButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        meterPerSecButton.layer.borderWidth = 3
-        meterPerSecButton.layer.borderColor = UIColor.white.cgColor
+        meterPerSecButton.layer.borderWidth = 1
+        meterPerSecButton.layer.borderColor = UIColor.black.cgColor
         meterPerSecButton.layer.cornerRadius = meterPerSecButton.frame.height / 2
         
         // Miles/h Button
         milesPerHrButton.layer.backgroundColor = UIColor.white.cgColor
         milesPerHrButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        milesPerHrButton.layer.borderWidth = 3
-        milesPerHrButton.layer.borderColor = UIColor.white.cgColor
+        milesPerHrButton.layer.borderWidth = 1
+        milesPerHrButton.layer.borderColor = UIColor.black.cgColor
         milesPerHrButton.layer.cornerRadius = milesPerHrButton.frame.height / 2
         
         // Km/h
         kmPerHrButton.layer.backgroundColor = UIColor.white.cgColor
         kmPerHrButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        kmPerHrButton.layer.borderWidth = 3
-        kmPerHrButton.layer.borderColor = UIColor.white.cgColor
+        kmPerHrButton.layer.borderWidth = 1
+        kmPerHrButton.layer.borderColor = UIColor.black.cgColor
         kmPerHrButton.layer.cornerRadius = kmPerHrButton.frame.height / 2
         
         // Tab Bar Items

@@ -16,6 +16,7 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var maxSpeedLabel: UILabel!
     @IBOutlet weak var speedUnitLabel: UILabel!
     
     @IBOutlet weak var meterPerSecButton: UIButton!
@@ -23,6 +24,8 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var kmPerHrButton: UIButton!
     
     var speed:Double = Double()
+    var maxSpeed:Double = Double()
+    
     var unitConversionValue:Double = Double()
     
     let locationManager = CLLocationManager()
@@ -33,6 +36,7 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
         speedLabel.text = "0"
         speedUnitLabel.text = "Meters/Second"
         speed = 0
+        maxSpeed = speed
         unitConversionValue = 1
         
         meterPerSecButton.tag = 0
@@ -40,6 +44,10 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
         kmPerHrButton.tag = 2
         
         designingUI()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         askingForUserLocationAndGpsPermission()
     }
     
@@ -48,16 +56,19 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
         if sender.tag == 0 {
             
             speedUnitLabel.text = "Meters/Second"
+            maxSpeed = 0
             return unitConversionValue = 1
         }
         if sender.tag == 1 {
-    
+            
             speedUnitLabel.text = "Miles/Hour"
+            maxSpeed = 0
             return unitConversionValue = 2.236936
         }
         if sender.tag == 2 {
             
             speedUnitLabel.text = "Kilometers/Hour"
+            maxSpeed = 0
             return unitConversionValue = 3.6
         }
     }
@@ -65,7 +76,7 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func aboutButton(_ sender: UIButton) {
         
         if let aboutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "aboutViewController") as? AboutViewController {
-          self.present(aboutViewController, animated: true, completion: nil)
+            self.present(aboutViewController, animated: true, completion: nil)
         }
         
     }
@@ -80,6 +91,7 @@ extension SpeedViewController {
     // Taking permission from the user to get the current location
     
     func askingForUserLocationAndGpsPermission() {
+        
         let authorizationStatus = CLLocationManager.authorizationStatus()
         if authorizationStatus == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
@@ -132,10 +144,15 @@ extension SpeedViewController {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
-        speed = location!.speed * unitConversionValue
+        speed = (location?.speed ?? 0) * unitConversionValue
+        
+        if speed > maxSpeed {
+            maxSpeed = speed
+        }
         
         if speed >= 0 {
-        speedLabel.text = String(Int(speed))
+            speedLabel.text = String(Int(speed))
+            maxSpeedLabel.text = String(Int(maxSpeed))
         }
     }
 }
