@@ -22,14 +22,54 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var milesPerHrButton: UIButton!
     @IBOutlet weak var kmPerHrButton: UIButton!
     
+    var speed:Double = Double()
+    var unitConversionValue:Double = Double()
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        speedLabel.text = "0"
+        speedUnitLabel.text = "Meters/Second"
+        speed = 0
+        unitConversionValue = 1
+        
+        meterPerSecButton.tag = 0
+        milesPerHrButton.tag = 1
+        kmPerHrButton.tag = 2
+        
         designingUI()
         askingForUserLocationAndGpsPermission()
     }
-
+    
+    @IBAction func unitChangedButtonTapped(_ sender: UIButton) {
+        
+        if sender.tag == 0 {
+            
+            speedUnitLabel.text = "Meters/Second"
+            return unitConversionValue = 1
+        }
+        if sender.tag == 1 {
+    
+            speedUnitLabel.text = "Miles/Hour"
+            return unitConversionValue = 2.236936
+        }
+        if sender.tag == 2 {
+            
+            speedUnitLabel.text = "Kilometers/Hour"
+            return unitConversionValue = 3.6
+        }
+    }
+    
+    @IBAction func aboutButton(_ sender: UIButton) {
+        
+        if let aboutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "aboutViewController") as? AboutViewController {
+          self.present(aboutViewController, animated: true, completion: nil)
+        }
+        
+    }
+    
 }
 
 
@@ -67,9 +107,9 @@ extension SpeedViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
             
-            //showingCurrentSpeed()
         }
     }
+    
     
     // Letting user know that system did't get permission
     
@@ -85,43 +125,17 @@ extension SpeedViewController {
 
 
 
-
 // Showing the speed
 
 extension SpeedViewController {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        speedLabel.text = String(Int(location.speed))
-    }
-}
-
-
-
-
-// Designing UI //
-
-extension SpeedViewController {
-    
-    func designingUI() {
+        let location = locations.last
         
-        // Buttons
+        speed = location!.speed * unitConversionValue
         
-        meterPerSecButton.layer.borderWidth = 3
-        meterPerSecButton.layer.borderColor = UIColor.white.cgColor
-        meterPerSecButton.layer.cornerRadius = meterPerSecButton.frame.height / 2
-        
-        milesPerHrButton.layer.borderWidth = 3
-        milesPerHrButton.layer.borderColor = UIColor.white.cgColor
-        milesPerHrButton.layer.cornerRadius = milesPerHrButton.frame.height / 2
-        
-        kmPerHrButton.layer.borderWidth = 3
-        kmPerHrButton.layer.borderColor = UIColor.white.cgColor
-        kmPerHrButton.layer.cornerRadius = kmPerHrButton.frame.height / 2
-        
-        // Tab Bar Items
-        
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().unselectedItemTintColor = UIColor.lightGray
+        if speed >= 0 {
+        speedLabel.text = String(Int(speed))
+        }
     }
 }

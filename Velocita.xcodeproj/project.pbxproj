@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF8A4A36241BD6C400CCB205 /* UIDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A4A35241BD6C400CCB205 /* UIDesign.swift */; };
+		FF8A4A38241BE67400CCB205 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A4A37241BE67400CCB205 /* AboutViewController.swift */; };
+		FF8A4A3C241C103700CCB205 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8A4A3A241C103100CCB205 /* MapKit.framework */; };
 		FF8DB921241946B800A83B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8DB920241946B800A83B7D /* AppDelegate.swift */; };
 		FF8DB923241946B800A83B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8DB922241946B800A83B7D /* SceneDelegate.swift */; };
 		FF8DB928241946B800A83B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8DB926241946B800A83B7D /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF8A4A35241BD6C400CCB205 /* UIDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDesign.swift; sourceTree = "<group>"; };
+		FF8A4A37241BE67400CCB205 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		FF8A4A3A241C103100CCB205 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF8DB91D241946B800A83B7D /* Velocita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velocita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8DB920241946B800A83B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8DB922241946B800A83B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8A4A3C241C103700CCB205 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF8A4A39241C103100CCB205 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF8A4A3A241C103100CCB205 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF8DB914241946B800A83B7D = {
 			isa = PBXGroup;
 			children = (
 				FF8DB91F241946B800A83B7D /* Velocita */,
 				FF8DB91E241946B800A83B7D /* Products */,
+				FF8A4A39241C103100CCB205 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +105,8 @@
 			children = (
 				FF8DB93424195A2000A83B7D /* SpeedViewController.swift */,
 				FF8DB93624195A3800A83B7D /* MapViewController.swift */,
+				FF8A4A37241BE67400CCB205 /* AboutViewController.swift */,
+				FF8A4A35241BD6C400CCB205 /* UIDesign.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8A4A38241BE67400CCB205 /* AboutViewController.swift in Sources */,
 				FF8DB93524195A2000A83B7D /* SpeedViewController.swift in Sources */,
 				FF8DB921241946B800A83B7D /* AppDelegate.swift in Sources */,
 				FF8DB923241946B800A83B7D /* SceneDelegate.swift in Sources */,
 				FF8DB93724195A3800A83B7D /* MapViewController.swift in Sources */,
+				FF8A4A36241BD6C400CCB205 /* UIDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
