@@ -55,18 +55,28 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
         
         if sender.tag == 0 {
             
+            DispatchQueue.main.async {
+                self.colorChangeForMeterPerSecPressed()
+            }
+            
             speedUnitLabel.text = "Meters/Second"
             maxSpeed = 0
             return unitConversionValue = 1
         }
         if sender.tag == 1 {
             
+            DispatchQueue.main.async {
+                self.colorChangeForMilesPerHourPressed()
+            }
             speedUnitLabel.text = "Miles/Hour"
             maxSpeed = 0
             return unitConversionValue = 2.236936
         }
         if sender.tag == 2 {
             
+            DispatchQueue.main.async {
+                self.colorChangeForKilometersPerHourPressed()
+            }
             speedUnitLabel.text = "Kilometers/Hour"
             maxSpeed = 0
             return unitConversionValue = 3.6
@@ -154,5 +164,59 @@ extension SpeedViewController {
             speedLabel.text = String(Int(speed))
             maxSpeedLabel.text = String(Int(maxSpeed))
         }
+    }
+}
+
+
+
+// Button's color changing methods
+
+extension SpeedViewController {
+    
+    func colorChangeForMeterPerSecPressed() {
+        
+        // Meter/s Button
+        meterPerSecButton.layer.backgroundColor = UIColor(red: 226/255, green: 61/255, blue: 13/255, alpha: 1).cgColor
+        meterPerSecButton.setTitleColor(.white, for: .normal)
+        
+        // Miles/h Button
+        milesPerHrButton.layer.backgroundColor = UIColor.white.cgColor
+        milesPerHrButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+        // Km/h
+        kmPerHrButton.layer.backgroundColor = UIColor.white.cgColor
+        kmPerHrButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+    }
+    
+    func colorChangeForMilesPerHourPressed() {
+        
+        // Meter/s Button
+        meterPerSecButton.layer.backgroundColor = UIColor.white.cgColor
+        meterPerSecButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+        // Miles/h Button
+        milesPerHrButton.layer.backgroundColor = UIColor(red: 226/255, green: 61/255, blue: 13/255, alpha: 1).cgColor
+        milesPerHrButton.setTitleColor(.white, for: .normal)
+        
+        // Km/h
+        kmPerHrButton.layer.backgroundColor = UIColor.white.cgColor
+        kmPerHrButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+    }
+    
+    func colorChangeForKilometersPerHourPressed() {
+        
+        // Meter/s Button
+        meterPerSecButton.layer.backgroundColor = UIColor.white.cgColor
+        meterPerSecButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+        // Miles/h Button
+        milesPerHrButton.layer.backgroundColor = UIColor.white.cgColor
+        milesPerHrButton.setTitleColor(UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1), for: .normal)
+        
+        // Km/h
+        kmPerHrButton.layer.backgroundColor = UIColor(red: 226/255, green: 61/255, blue: 13/255, alpha: 1).cgColor
+        kmPerHrButton.setTitleColor(.white, for: .normal)
     }
 }

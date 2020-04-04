@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2BBFB124390C00005365EF /* Aero.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2BBFB024390C00005365EF /* Aero.ttf */; };
 		FF8A4A36241BD6C400CCB205 /* UIDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A4A35241BD6C400CCB205 /* UIDesign.swift */; };
 		FF8A4A38241BE67400CCB205 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A4A37241BE67400CCB205 /* AboutViewController.swift */; };
 		FF8A4A3C241C103700CCB205 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8A4A3A241C103100CCB205 /* MapKit.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF2BBFB024390C00005365EF /* Aero.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aero.ttf; sourceTree = "<group>"; };
 		FF8A4A35241BD6C400CCB205 /* UIDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDesign.swift; sourceTree = "<group>"; };
 		FF8A4A37241BE67400CCB205 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FF8A4A3A241C103100CCB205 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,7 @@
 				FF8DB93A24195B4A00A83B7D /* Controller */,
 				FF8DB93B24195B5400A83B7D /* Support */,
 				FF8DB929241946B900A83B7D /* Assets.xcassets */,
+				FF2BBFB024390C00005365EF /* Aero.ttf */,
 				FF8DB92E241946B900A83B7D /* Info.plist */,
 			);
 			path = Velocita;
@@ -181,6 +184,7 @@
 				FF8DB92D241946B900A83B7D /* LaunchScreen.storyboard in Resources */,
 				FF8DB92A241946B900A83B7D /* Assets.xcassets in Resources */,
 				FF8DB928241946B800A83B7D /* Main.storyboard in Resources */,
+				FF2BBFB124390C00005365EF /* Aero.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = R975Y8X2C9;
 				INFOPLIST_FILE = Velocita/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -349,6 +354,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fahimrahman.Velocita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -363,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = R975Y8X2C9;
 				INFOPLIST_FILE = Velocita/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -370,6 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fahimrahman.Velocita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

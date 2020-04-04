@@ -21,24 +21,18 @@ extension SpeedViewController {
         // Buttons
         
         // Meter/s Button
-        meterPerSecButton.layer.backgroundColor = UIColor.white.cgColor
-        meterPerSecButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        meterPerSecButton.layer.borderWidth = 1
-        meterPerSecButton.layer.borderColor = UIColor.black.cgColor
+        meterPerSecButton.layer.backgroundColor = UIColor(red: 226/255, green: 61/255, blue: 13/255, alpha: 1).cgColor
+        meterPerSecButton.setTitleColor(.white, for: .normal)
         meterPerSecButton.layer.cornerRadius = meterPerSecButton.frame.height / 2
         
         // Miles/h Button
         milesPerHrButton.layer.backgroundColor = UIColor.white.cgColor
         milesPerHrButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        milesPerHrButton.layer.borderWidth = 1
-        milesPerHrButton.layer.borderColor = UIColor.black.cgColor
         milesPerHrButton.layer.cornerRadius = milesPerHrButton.frame.height / 2
         
         // Km/h
         kmPerHrButton.layer.backgroundColor = UIColor.white.cgColor
         kmPerHrButton.tintColor = UIColor(red: 65/255, green: 81/255, blue: 174/255, alpha: 1)
-        kmPerHrButton.layer.borderWidth = 1
-        kmPerHrButton.layer.borderColor = UIColor.black.cgColor
         kmPerHrButton.layer.cornerRadius = kmPerHrButton.frame.height / 2
         
         // Tab Bar Items
