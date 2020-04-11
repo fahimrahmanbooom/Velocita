@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVT-nB-NxO">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kz-6V-NXS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="wGD-rm-jwm">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="wGD-rm-jwm">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -178,13 +179,13 @@ Developer: Fahim Rahman</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YA-Es-TwF">
-                                <rect key="frame" x="331.33333333333331" y="81.666666666666671" width="25" height="25"/>
+                                <rect key="frame" x="331.33333333333326" y="81.666666666666671" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Md2-lG-rTF"/>
                                     <constraint firstAttribute="width" constant="25" id="b3S-Uz-11q"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="info.circle.fill" catalog="system"/>
+                                <state key="normal" backgroundImage="info"/>
                                 <connections>
                                     <action selector="aboutButton:" destination="qce-7M-NDw" eventType="touchUpInside" id="xj7-wY-Dfg"/>
                                 </connections>
@@ -240,7 +241,7 @@ Developer: Fahim Rahman</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fg7-KW-X1E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Speed" image="speedometer" catalog="system" id="wVJ-vb-MJE">
+                    <tabBarItem key="tabBarItem" title="Speed" image="speedometer" id="wVJ-vb-MJE">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -282,9 +283,9 @@ Developer: Fahim Rahman</string>
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="map" catalog="system" width="128" height="113"/>
-        <image name="speedometer" catalog="system" width="128" height="121"/>
+        <image name="info" width="100" height="100"/>
+        <image name="map" width="25" height="25"/>
+        <image name="speedometer" width="25" height="25"/>
         <image name="velocita" width="2084" height="2084"/>
     </resources>
 </document>
