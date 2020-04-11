@@ -44,7 +44,6 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
         kmPerHrButton.tag = 2
         
         designingUI()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
